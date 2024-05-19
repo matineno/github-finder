@@ -1,0 +1,200 @@
+@import "./reset.css";
+
+:root {
+    --background-color-one: rgb(255, 255, 255);
+    --background-color-two: rgb(0, 0, 0);
+    --dialog-background-color: rgba(0, 0, 0, 0.877);
+    --font-color-one: rgb(240, 235, 235);
+    --font-color-two: rgb(28, 26, 26);
+    --footer-background: rgba(251, 251, 251, 0);
+    --background-mask: rgba(0, 0, 0, 0.7);
+    --action-button-color: #551985;
+    --input-background-color: rgba(26, 26, 26, 0.863);
+    --input-border-color: rgba(240, 235, 235, 0.831);
+    --shadow: -16px 13px 19px -3px rgba(0, 0, 0, 0.122);
+    }
+
+* {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #131218;
+    color: #fff;
+    position: relative;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+/* Auxilary classes */
+
+.container {
+    width: min(100% - 90px, 1080px);
+    margin: 0 auto;
+} 
+
+
+.flex {
+    display: flex;
+}
+
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+.space-around {
+    justify-content: space-around;
+}
+
+
+.space-between {
+    justify-content: space-between;
+}
+
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.gap-15 {
+    gap: 15px;
+}
+
+
+.gap-50 {
+    gap: 50px;
+}
+
+/* Search component */
+
+.logo {
+    background: rgba(255, 255, 255, 0) url(../img/logo.png) center /cover no-repeat;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.logo::before {
+    width: 100%;
+}
+
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #ffffff00;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.input-container {
+    position: relative;
+    padding: 1px; /* Adjust padding to your needs */
+
+  }
+  
+  .input-container::before {
+    margin-top: 10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px; /* Border thickness */
+    border-radius: 50px;
+    background: rgb(29,29,51);
+    background: rgb(39,39,89);
+    background: linear-gradient(90deg, rgba(39,39,89,1) 0%, rgba(4,4,130,0.9668242296918768) 49%, rgba(49,49,96,1) 100%);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    z-index: -1;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+/* User component */
+.header {
+    margin-top: 10px;
+    height: 50px;
+    h4 {
+        margin: 2px 5px;
+    }
+}
+.header-logo {
+    background: rgba(255, 255, 255, 0) url(../img/logo.png) center /cover no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.header-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.profile-container {
+    width: 25%;
+}
+
+.repo-container {
+    width: 70%;
+}
+
+.profile-avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+} 
+
+.profile-avatar {
+    border-radius: 100%;
+}
+
+.profile-button {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 2px;
+}
+
+.repo-list {
+    list-style-type: none;
+    padding: 0; 
+    margin-top: 10px;
+    li {
+    height: 100px; 
+    padding-top: 10px;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc; 
+    }
+}
