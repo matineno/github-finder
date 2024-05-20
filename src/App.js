@@ -7,7 +7,7 @@ import User from './components/User';
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename="/github-finder">
         <AnimatePresence mode='wait'>
           <Routes>
             <Route path="/" element={<Search />} />
