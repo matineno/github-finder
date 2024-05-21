@@ -1,8 +1,8 @@
 {
-  "name": "github-finder",
+  "name": "matineno-github-finder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "matineno-github-finder",
+  "homepage": "https://matineno-github-finder.netlify.app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

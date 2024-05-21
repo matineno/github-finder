@@ -7,7 +7,7 @@ import User from './components/User';
 function App() {
   return (
     <div>
-      <Router basename="matineno-github-finder">
+      <Router basename={process.env.PUBLIC_URL}>
         <AnimatePresence mode='wait'>
           <Routes>
             <Route path="/" element={<Search />} />
