@@ -4,17 +4,20 @@ import axios from 'axios';
 
 const Search = () => {
   const [username, setUsername] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`);
       if (response.data) {
-        navigate(`/user/${username}`);
+        navigate(`/${username}`);
       }
     } catch (error) {
-      console.error('User not found');
+      setError('User not found');
+      setUsername('');
     }
   };
 
@@ -23,12 +26,12 @@ const Search = () => {
       <div className='logo'></div>  
       <form onSubmit={handleSubmit}>
         <div className='input-container'>
-            <input 
+          <input 
             type="text" 
             value={username} 
             onChange={(e) => setUsername(e.target.value)} 
-            placeholder="Username" 
-            />
+            placeholder={error || "Username"}
+          />
         </div>
       </form>
       <h4>Welcome to Github Finder</h4>

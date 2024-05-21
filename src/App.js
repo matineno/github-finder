@@ -11,7 +11,7 @@ function App() {
         <AnimatePresence mode='wait'>
           <Routes>
             <Route path="/" element={<Search />} />
-            <Route path="/user/:username" element={<User />} />
+            <Route path="/:username" element={<User />} />
           </Routes>
         </AnimatePresence>
       </Router>

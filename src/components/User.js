@@ -83,7 +83,7 @@ const User = () => {
               <ul className='repo-list'>
                 {repos.map(repo => (
                   <li key={repo.id}>
-                    <h3>
+                    <h3 className='repo-name'>
                       <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                         {repo.name}
                       </a>
