@@ -12,7 +12,7 @@ const User = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = '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';
+        const token = process.env.GITHUB_TOKEN;
         if (!token) {
           throw new Error("GitHub token is missing");
         }
