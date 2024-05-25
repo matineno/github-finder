@@ -12,7 +12,6 @@ const User = () => {
     const fetchData = async () => {
       try {
         const token = process.env.REACT_APP_GITHUB_TOKEN;
-        console.log("Token:", token);
         if (!token) {
           throw new Error("GitHub token is missing");
         }
