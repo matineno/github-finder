@@ -12,6 +12,7 @@ const User = () => {
     const fetchData = async () => {
       try {
         const token = process.env.GITHUB_TOKEN;
+        console.log("Token:", process.env.GITHUB_TOKEN);
         if (!token) {
           throw new Error("GitHub token is missing");
         }
