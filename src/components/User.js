@@ -11,8 +11,8 @@ const User = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const token = process.env.GITHUB_TOKEN;
-        console.log("Token:", process.env.GITHUB_TOKEN);
+        const token = process.env.REACT_APP_GITHUB_TOKEN;
+        console.log("Token:", token);
         if (!token) {
           throw new Error("GitHub token is missing");
         }
